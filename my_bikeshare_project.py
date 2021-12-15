@@ -75,7 +75,7 @@ def load_data(city, month, day):
     df['month'] = df['Start Time'].dt.month
     df['day_of_week'] = df['Start Time'].dt.weekday_name
      
-    #Filter by month where applicable
+    #Filter by month in list
     if month != 'all':
         #Use month index list to get the value for the month
         months = ['january', 'february', 'march', 'april', 'may', 'june']
@@ -84,7 +84,7 @@ def load_data(city, month, day):
         #create a new dataframe for months
         df = df[df['month'] == month]
         
-    #Filter by weekday where applicable
+    #Filter by weekday in list
     if day != 'all':
         #Filter by weekday to create new dataframe
         df = df[df['day_of_week'] == day.title()]
