@@ -84,7 +84,7 @@ def load_data(city, month, day):
         #create a new dataframe for months
         df = df[df['month'] == month]
         
-    #Filter by weekday where applicable
+    #Filter by weekday in list
     if day != 'all':
         #Filter by weekday to create new dataframe
         df = df[df['day_of_week'] == day.title()]
